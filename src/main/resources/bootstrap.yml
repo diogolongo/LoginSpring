@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: login
+  redis:
+    host: 192.168.99.100
+    port: 32772
+    
+server:
+  port: 8087
