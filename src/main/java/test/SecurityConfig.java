@@ -43,13 +43,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	@Bean
+	public HttpSessionEventPublisher httpSessionEventPublisher() {
+		return new HttpSessionEventPublisher();
+	}
+
+	@Bean
 	public SessionRegistry sessionRegistry() {
 		return new SessionRegistryImpl();
 	}
-	 @Bean
-	    public static ServletListenerRegistrationBean<HttpSessionEventPublisher> httpSessionEventPublisher() {
-	        return new ServletListenerRegistrationBean<HttpSessionEventPublisher>(new HttpSessionEventPublisher());
-	    }
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
