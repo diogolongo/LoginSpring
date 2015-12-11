@@ -21,6 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<spring-session.version>1.1.0.M1</spring-session.version>
 	</properties>
 
 	<dependencies>
@@ -29,10 +30,12 @@
 			<artifactId>jolokia-core</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-redis</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session-data-redis</artifactId>
-			   <version>1.0.3.BUILD-SNAPSHOT</version>
-			<type>pom</type>
+			<artifactId>spring-session</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
